@@ -4,6 +4,8 @@ class Article < ApplicationRecord
         ["body", "created_at", "id", "id_value", "title", "updated_at"]
     end
 
+    has_one_attached :image
+    
     validates :title, presence: true
     validates :body, presence: true, length: { minimum: 10 }
 end
